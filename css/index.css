@@ -30,8 +30,9 @@ header nav ul a {
 }
 .main-container .evContainer {
   display: flex;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
   min-height: 100%;
+  width: 50%;
 }
 .main-container .evContainer .evCard-Container {
   display: flex;
@@ -45,7 +46,6 @@ header nav ul a {
 }
 .main-container .evContainer img {
   width: 250px;
-  border: 1px solid red;
 }
 .main-container .aboutUsContainer {
   display: flex;
@@ -54,7 +54,7 @@ header nav ul a {
   flex-direction: row;
   display: flex;
   background-color: #fc7e00;
-  max-height: 100%;
+  width: 50%;
 }
 .main-container .aboutUsContainer ul, .main-container .aboutUsContainer li {
   color: white;
@@ -73,4 +73,8 @@ a, button {
   text-decoration: none;
   border: none;
   background: transparent;
+}
+
+*::-webkit-scrollbar {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

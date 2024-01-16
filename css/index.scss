@@ -26,3 +26,8 @@ a, button {
     border: none;
     background: transparent;
 }
+
+
+*::-webkit-scrollbar {
+    display: none;
+}
