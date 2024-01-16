@@ -1,0 +1,20 @@
+header {
+    padding: 1rem;
+
+    nav {
+        @include flexCenter();
+
+        ul {
+            flex: 1;
+            @include flexCenter(space-between);
+            width: 100%;
+            max-width: 800px;
+
+            a {
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #000;
+            }
+        }
+    }
+}

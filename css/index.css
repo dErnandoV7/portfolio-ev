@@ -1,0 +1,76 @@
+header {
+  padding: 1rem;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+header nav ul {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 800px;
+}
+header nav ul a {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.main-container {
+  display: flex;
+  background-color: black;
+  flex-direction: row;
+  min-height: 92.8vh;
+}
+.main-container .evContainer {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  min-height: 100%;
+}
+.main-container .evContainer .evCard-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-direction: column;
+}
+.main-container .evContainer .evCard-Container ul, .main-container .evContainer .evCard-Container li {
+  color: white;
+}
+.main-container .evContainer img {
+  width: 250px;
+  border: 1px solid red;
+}
+.main-container .aboutUsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  background-color: #fc7e00;
+  max-height: 100%;
+}
+.main-container .aboutUsContainer ul, .main-container .aboutUsContainer li {
+  color: white;
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+  list-style: none;
+}
+
+a, button {
+  text-decoration: none;
+  border: none;
+  background: transparent;
+}/*# sourceMappingURL=index.css.map */

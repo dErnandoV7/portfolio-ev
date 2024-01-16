@@ -1,0 +1,28 @@
+@mixin flexCenter($justify-content: center, $align-items: center, $direction: row) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+
+@import './variaveis';
+@import './header';
+@import './home';
+@import './skills';
+@import './projects';
+@import './contact';
+
+// Estilos gerais
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    list-style: none;
+}
+
+a, button {
+    text-decoration: none;
+    border: none;
+    background: transparent;
+}
