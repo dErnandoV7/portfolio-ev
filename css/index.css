@@ -1,5 +1,7 @@
 header {
   padding: 1rem;
+  background: #262626;
+  border-bottom: 1px solid #3c3c3c;
 }
 header nav {
   display: flex;
@@ -8,7 +10,6 @@ header nav {
   flex-direction: row;
 }
 header nav ul {
-  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,13 @@ header nav ul {
 header nav ul a {
   font-size: 18px;
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+header nav ul a:hover {
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4901960784);
 }
 
 .main-container {
@@ -29,34 +36,58 @@ header nav ul a {
   min-height: 92.8vh;
 }
 .main-container .evContainer {
-  display: flex;
-  background-color: #000000;
+  background: #282828 url(../images/fundo.jpg) no-repeat center center;
+  background-size: cover;
   min-height: 100%;
   width: 50%;
+}
+.main-container .evContainer .evCardBg {
+  background: rgba(0, 0, 0, 0.6156862745);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 .main-container .evContainer .evCard-Container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background-color: rgba(0, 0, 0, 0.5647058824);
   flex-direction: column;
+  max-width: 300px;
+  min-height: 600px;
+  border: solid 2px #7c7c7c;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7450980392);
 }
-.main-container .evContainer .evCard-Container ul, .main-container .evContainer .evCard-Container li {
+.main-container .evContainer .evCard-Container p {
   color: white;
+  text-align: left;
+  padding: 22px;
+  font-size: 18px;
+}
+.main-container .evContainer .evCard-Container p strong {
+  font-size: 25px;
 }
 .main-container .evContainer img {
-  width: 250px;
+  width: 280px;
 }
 .main-container .aboutUsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  display: flex;
-  background-color: #fc7e00;
+  background-size: cover;
+  border-left: 1px solid #4d4d4d;
   width: 50%;
 }
-.main-container .aboutUsContainer ul, .main-container .aboutUsContainer li {
+.main-container .aboutUsContainer .aboutUsCard {
+  background: rgba(0, 0, 0, 0.6509803922);
+  min-height: 100vh;
+}
+.main-container .aboutUsContainer .aboutUsCard ul, .main-container .aboutUsContainer .aboutUsCard li {
   color: white;
   font-size: 15px;
 }

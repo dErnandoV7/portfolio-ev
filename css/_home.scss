@@ -5,34 +5,55 @@
     min-height: 92.8vh;
 
     .evContainer{
-        display: flex;
-        background-color: #000000;
+        // @include flexCenter();
+        background: #282828 url(../images/fundo.jpg) no-repeat center center;
+        background-size: cover;
         min-height: 100%;
-        // flex: 1;
         width: 50%;
+        
+        .evCardBg {
+            background: #0000009d;
+            min-height: 100vh;
+            @include flexCenter();
+        }
+
         .evCard-Container{
             @include flexCenter();
+            background-color: #00000090;
             flex-direction: column;
-            // padding: 200px 0px;
-            // border: 3px solid blue;
-            ul, li{
+            max-width: 300px;
+            min-height: 600px;
+            border: solid 2px #7c7c7c;
+            border-radius: 30px;
+            box-shadow: 0px 0px 20px 0px #000000be;
+            
+            p{
                 color: white;
+                text-align: left;
+                padding: 22px;
+                font-size: 18px;
+                strong {
+                    font-size: 25px;
+                }
             }
         }
         img {
-            width: 250px;
-            // border: 1px solid red;
+            width: 280px;
         }
     }
 
     .aboutUsContainer{
         @include flexCenter();
-        display: flex;
-        background-color: #fc7e00;
+        background-size: cover;
+        border-left: 1px solid #4d4d4d;
         width: 50%;
-        ul, li{
+        .aboutUsCard{
+            background: #000000a6;
+            min-height: 100vh;
+            ul, li{
             color: white;
             font-size: 15px;
+            }
         }
     }
     
