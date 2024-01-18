@@ -1,3 +1,4 @@
+
 .main-container{
     display: flex;
     background-color: black;
@@ -41,18 +42,25 @@
             width: 280px;
         }
     }
-
-    .aboutUsContainer{
+    
+    .skillsContainer{
         @include flexCenter();
         background-size: cover;
+        background: #000000;
         border-left: 1px solid #4d4d4d;
         width: 50%;
-        .aboutUsCard{
-            background: #000000a6;
-            min-height: 100vh;
+        .skillsCard{
+            display: flex;
+            flex-direction: column;
+            min-width: 50vh;
+            min-height: 50vh;
+            gap: 30px;
+            img{
+                @include widthImages();
+            }
             ul, li{
-            color: white;
-            font-size: 15px;
+            color: rgb(255, 255, 255);
+            font-size: 30px;
             }
         }
     }

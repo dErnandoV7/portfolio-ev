@@ -5,8 +5,13 @@
     flex-direction: $direction;
 }
 
+@mixin widthImages($width: 50px) {
+    width: $width;
+}
+
+
 @import './variaveis';
-@import './header';
+@import './sideBar';
 @import './home';
 @import './skills';
 @import './projects';

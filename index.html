@@ -17,23 +17,25 @@
         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Link JavaScript -->
     <script src="js/script.js" defer></script>
 
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Side Bar -->
+    <div class="side-bar">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-house"></i> <span>Home</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-rocket"></i> <span>Projects</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-address-book"></i> <span>Contact</span></a></li>
+        </ul>
+    </div>
 
     <div class="main-container">
         <!-- Left Container -->
@@ -42,21 +44,20 @@
                 <div class="evCard-Container">
                     <img src="images/logo.png" alt="Logo Ev" class="logoEv">
                     <div class="evCard">
-                        <p><strong>Somos a EV.</strong> <br><br>empresa revolucionária de Developers. Prometemos entregar sempre o máximo que pudermos e alcançarmos! </p>
+                        <p><strong>Somos a EV.</strong> <br><br>empresa revolucionária de Developers. Prometemos
+                            entregar sempre o máximo que pudermos e alcançarmos! </p>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Right Container -->
-        <div class="aboutUsContainer">
-            <div class="aboutUsCard">
-                <ul>
-                    <li> Lorem ipsum dolor, sit amet consectetur adipisicing elit. A quo sunt explicabo magnam
-                        nesciunt.
-                        Nulla molestias cum mollitia quae minima delectus quasi aliquid consequuntur, a repellat aut
-                        labore possimus voluptas!
-                    </li>
-                </ul>
+        <div class="skillsContainer">
+            <div class="skillsCard">
+                <div class="cssLg"> <img src="images/logocss.png" alt=""></div>
+                <div class="htmlLg"> <img src="images/logohtml.png" alt=""></div>
+                <div class="jsLg"><img src="images/logojs.png" alt=""></div>
+                <div class="reactLg"><img src="images/logoreact.png" alt=""></div>
+                <div class="sassLg"><img src="images/logosass.png" alt=""></div>
             </div>
         </div>
 

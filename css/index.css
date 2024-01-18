@@ -1,32 +1,38 @@
-header {
-  padding: 1rem;
-  background: #262626;
-  border-bottom: 1px solid #3c3c3c;
-}
-header nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  width: 100%;
-  max-width: 800px;
-}
-header nav ul a {
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 10px;
+.side-bar {
+  position: absolute;
+  top: 37%;
+  transform: translate(-45%);
   transition: 0.3s;
 }
-header nav ul a:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4901960784);
+.side-bar:hover {
+  transform: translateX(0);
+}
+.side-bar:hover span {
+  display: initial;
+}
+.side-bar ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+.side-bar ul li {
+  background: #fff;
+  padding: 15px 15px 15px 4px;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+  width: 120px;
+}
+.side-bar ul li a {
+  color: #000;
+  font-size: 20px;
+  text-align: left;
+}
+.side-bar ul li a span {
+  padding-left: 4px;
+  font-size: 18px;
+  display: none;
 }
 
 .main-container {
@@ -74,22 +80,29 @@ header nav ul a:hover {
 .main-container .evContainer img {
   width: 280px;
 }
-.main-container .aboutUsContainer {
+.main-container .skillsContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   background-size: cover;
+  background: #000000;
   border-left: 1px solid #4d4d4d;
   width: 50%;
 }
-.main-container .aboutUsContainer .aboutUsCard {
-  background: rgba(0, 0, 0, 0.6509803922);
-  min-height: 100vh;
+.main-container .skillsContainer .skillsCard {
+  display: flex;
+  flex-direction: column;
+  min-width: 50vh;
+  min-height: 50vh;
+  gap: 30px;
 }
-.main-container .aboutUsContainer .aboutUsCard ul, .main-container .aboutUsContainer .aboutUsCard li {
-  color: white;
-  font-size: 15px;
+.main-container .skillsContainer .skillsCard img {
+  width: 50px;
+}
+.main-container .skillsContainer .skillsCard ul, .main-container .skillsContainer .skillsCard li {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
 }
 
 * {

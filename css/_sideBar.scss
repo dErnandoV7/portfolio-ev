@@ -1,0 +1,39 @@
+.side-bar {
+    position: absolute;
+    top: 37%;
+    transform: translate(-45%);
+    transition: .3s;
+
+    &:hover {
+        transform: translateX(0)
+    }
+
+    &:hover span {
+        display: initial;
+    }
+
+    ul {
+        @include flexCenter(center, flex-start, column);
+        gap: 30px;
+
+        li {
+            background: #fff;
+            padding: 15px 15px 15px 4px;
+            border-radius: 0px 10px 10px 0px;
+            cursor: pointer;
+            width: 120px;
+
+            a {
+                color: #000;
+                font-size: 20px;
+                text-align: left;
+
+                span {
+                    padding-left: 4px;
+                    font-size: 18px;
+                    display: none;
+                }
+            }
+        }
+    }
+}
