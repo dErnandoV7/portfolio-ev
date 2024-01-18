@@ -1,44 +1,57 @@
 .side-bar {
-    position: absolute;
-    top: 37%;
-    transform: translate(-60%);
-    transition: .3s;
+  position: absolute;
+  top: 37%;
+  transform: translate(-60%);
+  transition: 0.3s;
 
-    &:hover {
-        transform: translateX(0)
-    }
+  &:hover {
+    transform: translateX(0);
+  }
 
-    &:hover span {
-        display: initial;
-    }
+  &:hover span {
+    display: initial;
+  }
 
-    &:hover li {
+  &:hover li {
+    text-align: left;
+    padding-right: 4px;
+  }
+
+  ul {
+    @include flexCenter(center, flex-start, column);
+    gap: 30px;
+
+    li {
+      background: #fff;
+      padding: 15px 10px 15px 4px;
+      border-radius: 0px 10px 10px 0px;
+      cursor: pointer;
+      width: 110px;
+      text-align: right;
+
+      a {
+        color: #000;
+        font-size: 20px;
         text-align: left;
-    }
 
-    ul {
-        @include flexCenter(center, flex-start, column);
-        gap: 30px;
-
-        li {
-            background: #fff;
-            padding: 15px 15px 15px 4px;
-            border-radius: 0px 10px 10px 0px;
-            cursor: pointer;
-            width: 120px;
-            text-align: right;
-
-            a {
-                color: #000;
-                font-size: 20px;
-                text-align: left;
-
-                span {
-                    padding-left: 4px;
-                    font-size: 18px;
-                    display: none;
-                }
-            }
+        span {
+          padding-left: 4px;
+          font-size: 18px;
+          display: none;
         }
+      }
     }
+  }
+}
+
+// Responsividade
+@media (max-width: 550px) {
+  .side-bar {
+    display: none;
+  }
+
+  .main-container {
+    padding-top: 50px;
+  }
+  
 }

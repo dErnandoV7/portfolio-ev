@@ -1,68 +1,77 @@
+.main-container {
+  display: flex;
+  background-color: black;
+  flex-wrap: wrap;
+  min-height: 100vh;
 
-.main-container{
-    display: flex;
-    background-color: black;
-    flex-direction: row;
-    min-height: 92.8vh;
+  > div {
+    flex: 1;
+  }
 
-    .evContainer{
-        // @include flexCenter();
-        background: #282828 url(../images/fundo.jpg) no-repeat center center;
-        background-size: cover;
-        min-height: 100%;
-        width: 50%;
-        
-        .evCardBg {
-            background: #0000009d;
-            min-height: 100vh;
-            @include flexCenter();
-        }
-
-        .evCard-Container{
-            @include flexCenter();
-            background-color: #00000090;
-            flex-direction: column;
-            max-width: 300px;
-            min-height: 600px;
-            border: solid 2px #7c7c7c;
-            border-radius: 30px;
-            box-shadow: 0px 0px 20px 0px #000000be;
-            
-            p{
-                color: white;
-                text-align: left;
-                padding: 22px;
-                font-size: 18px;
-                strong {
-                    font-size: 25px;
-                }
-            }
-        }
-        img {
-            width: 280px;
-        }
+  .evContainer {
+    background: #282828 url(../images/fundo.jpg) no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    .evCardBg {
+      background: #0000009d;
+      min-height: 100vh;
+      @include flexCenter();
     }
-    
-    .skillsContainer{
-        @include flexCenter();
-        background-size: cover;
-        background: #000000;
-        border-left: 1px solid #4d4d4d;
-        width: 50%;
-        .skillsCard{
-            display: flex;
-            flex-direction: column;
-            min-width: 50vh;
-            min-height: 50vh;
-            gap: 30px;
-            img{
-                @include widthImages();
-            }
-            ul, li{
-            color: rgb(255, 255, 255);
-            font-size: 30px;
-            }
+
+    .evCard-Container {
+      @include flexCenter();
+      background-color: #00000090;
+      flex-direction: column;
+      width: 100%;
+      max-width: 300px;
+      min-height: 600px;
+      border: solid 2px #7c7c7c;
+      border-radius: 30px;
+      box-shadow: 0px 0px 20px 0px #000000be;
+
+      p {
+        color: white;
+        text-align: left;
+        padding: 22px;
+        font-size: 18px;
+        strong {
+          font-size: 25px;
         }
+      }
     }
-    
+    img {
+      width: 100%;
+      max-width: 280px;
+    }
+  }
+
+  .skillsContainer {
+    @include flexCenter();
+    background-size: cover;
+    background: #000000;
+    border-left: 1px solid #4d4d4d;
+    .skillsCard {
+      display: flex;
+      flex-direction: column;
+      min-width: 50vh;
+      min-height: 50vh;
+      gap: 30px;
+      img {
+        @include widthImages();
+      }
+      ul,
+      li {
+        color: rgb(255, 255, 255);
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+// Responsividade
+@media (max-width: 1100px) {
+  .main-container {
+    flex-direction: column;
+    padding-top: 50px;
+  }
 }

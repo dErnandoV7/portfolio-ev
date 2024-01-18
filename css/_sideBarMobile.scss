@@ -1,0 +1,61 @@
+.show-side-bar-mobile {
+  position: absolute;
+  left: 40px;
+  top: 10px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.side-bar-mobile {
+  @include flexCenter(center, center, column);
+  padding: 14px 12px 20px;
+  background: #121111;
+  border-bottom: 1px solid #a2a2a2;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  transition: 0.3s;
+  
+  button {
+    align-self: flex-start;
+    font-size: 30px;
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  ul {
+    @include flexCenter();
+    gap: 30px;
+
+    a {
+      @include flexCenter();
+      color: #fff;
+      gap: 4px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.transitionEnter {
+  transform: translateY(0);
+}
+
+// Responsividade
+@media (max-width: 550px) {
+  .show-side-bar-mobile {
+    display: initial;
+  }
+}
+
+@media (max-width: 350px) {
+  .side-bar-mobile {
+    i {
+      font-size: 25px;
+    }
+    span {
+      display: none;
+    }
+  }
+}

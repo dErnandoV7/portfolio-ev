@@ -12,6 +12,7 @@
 
 @import './variaveis';
 @import './sideBar';
+@import './sideBarMobile';
 @import './home';
 @import './skills';
 @import './projects';
@@ -34,5 +35,9 @@ a, button {
 
 
 *::-webkit-scrollbar {
+    display: none;
+}
+
+.hide {
     display: none;
 }
