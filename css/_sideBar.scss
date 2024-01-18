@@ -1,7 +1,7 @@
 .side-bar {
     position: absolute;
     top: 37%;
-    transform: translate(-45%);
+    transform: translate(-60%);
     transition: .3s;
 
     &:hover {
@@ -10,6 +10,10 @@
 
     &:hover span {
         display: initial;
+    }
+
+    &:hover li {
+        text-align: left;
     }
 
     ul {
@@ -22,6 +26,7 @@
             border-radius: 0px 10px 10px 0px;
             cursor: pointer;
             width: 120px;
+            text-align: right;
 
             a {
                 color: #000;

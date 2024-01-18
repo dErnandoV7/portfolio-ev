@@ -1,7 +1,7 @@
 .side-bar {
   position: absolute;
   top: 37%;
-  transform: translate(-45%);
+  transform: translate(-60%);
   transition: 0.3s;
 }
 .side-bar:hover {
@@ -9,6 +9,9 @@
 }
 .side-bar:hover span {
   display: initial;
+}
+.side-bar:hover li {
+  text-align: left;
 }
 .side-bar ul {
   display: flex;
@@ -23,6 +26,7 @@
   border-radius: 0px 10px 10px 0px;
   cursor: pointer;
   width: 120px;
+  text-align: right;
 }
 .side-bar ul li a {
   color: #000;
