@@ -1,4 +1,5 @@
 .show-side-bar-mobile {
+  display: none;
   position: absolute;
   left: 40px;
   top: 10px;
@@ -17,7 +18,7 @@
   width: 100%;
   transform: translateY(-100%);
   transition: 0.3s;
-  
+
   button {
     align-self: flex-start;
     font-size: 30px;

@@ -44,11 +44,9 @@
   .side-bar {
     display: none;
   }
-  .main-container {
-    padding-top: 50px;
-  }
 }
 .show-side-bar-mobile {
+  display: none;
   position: absolute;
   left: 40px;
   top: 10px;
@@ -113,15 +111,17 @@
 }
 .main-container {
   display: flex;
-  background-color: black;
+  background: black;
+  width: 100%;
   flex-wrap: wrap;
+  padding: 10px;
   min-height: 100vh;
 }
 .main-container > div {
   flex: 1;
 }
 .main-container .evContainer {
-  background: #282828 url(../images/fundo.jpg) no-repeat center center;
+  background: #000000 url(../images/fundo.jpg) no-repeat center center;
   background-size: cover;
   min-height: 100%;
 }
@@ -171,13 +171,56 @@
 }
 .main-container .skillsContainer .skillsCard {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  min-width: 50vh;
+  padding: 1rem 0.5rem;
+  width: 100%;
+  max-width: 500px;
   min-height: 50vh;
   gap: 30px;
 }
+.main-container .skillsContainer .skillsCard .Lg {
+  background-color: rgba(255, 255, 255, 0.279);
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.main-container .skillsContainer .skillsCard .Lg > .img-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+  width: 100%;
+  transition: 0.3s;
+}
+.main-container .skillsContainer .skillsCard .Lg .square {
+  transform: rotate(45deg);
+  width: 80%;
+  height: 200%;
+  top: -40%;
+  right: -100%;
+  position: absolute;
+  transition: 0.3s;
+  background-color: rgb(0, 0, 0);
+}
+.main-container .skillsContainer .skillsCard .Lg:hover > .img-li {
+  animation: animationImgLi 0.3s linear forwards;
+}
+.main-container .skillsContainer .skillsCard .Lg:hover .square {
+  right: -30%;
+}
+.main-container .skillsContainer .skillsCard .Lg li {
+  transition: 0.4s;
+  font-weight: bold;
+}
 .main-container .skillsContainer .skillsCard img {
-  width: 50px;
+  transition: 0.4s;
+  height: 50px;
 }
 .main-container .skillsContainer .skillsCard ul,
 .main-container .skillsContainer .skillsCard li {
@@ -185,6 +228,14 @@
   font-size: 30px;
 }
 
+@keyframes animationImgLi {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+  }
+}
 @media (max-width: 1100px) {
   .main-container {
     flex-direction: column;

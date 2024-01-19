@@ -10,13 +10,15 @@ buttonShowSideBarMob.addEventListener("click", (e) => {
   buttonShowSideBarMob.classList.toggle("hide");
 });
 
-buttonHideSideBarMob.addEventListener("click", () => {
+buttonHideSideBarMob.addEventListener("click", (e) => {
+  e.stopPropagation()
+
   elSideBarMobile.classList.toggle("transitionEnter");
   buttonShowSideBarMob.classList.toggle("hide");
 });
 
 document.addEventListener("click", (e) => {
   const el = e.target;
-  if (elSideBarMobile.classList.contains("transitionEnter")) return;
+  if (!elSideBarMobile.classList.contains("transitionEnter")) return;
   if (!el.classList.contains("side-bar-mobile")) buttonHideSideBarMob.click();
 });
