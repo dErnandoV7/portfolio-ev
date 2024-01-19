@@ -13,7 +13,7 @@
   .evContainer {
     background: #000000 url(../images/fundo.jpg) no-repeat center center;
     background-size: cover;
-    min-height: 100%;
+    min-height: 100vh;
 
     .evCardBg {
       background: #0000009d;
@@ -131,6 +131,9 @@
 @media (max-width: 1100px) {
   .main-container {
     flex-direction: column;
-    padding-top: 50px;
+  }
+
+  .evCardBg {
+    padding-top: 80px;
   }
 }

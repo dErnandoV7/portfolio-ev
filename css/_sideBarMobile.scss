@@ -2,9 +2,10 @@
   display: none;
   position: absolute;
   left: 40px;
-  top: 10px;
+  top: 40px;
   color: #fff;
   font-size: 30px;
+  cursor: pointer;
 }
 
 .side-bar-mobile {
@@ -24,6 +25,7 @@
     font-size: 30px;
     margin-left: 10px;
     color: #fff;
+    cursor: pointer;
   }
 
   ul {
