@@ -9,6 +9,7 @@
   > div {
     flex: 1;
   }
+
   //Quadro da pagina inicial
   .evContainer {
     background: #000000 url(../images/fundo.jpg) no-repeat center center;
@@ -23,7 +24,7 @@
 
     .evCard-Container {
       @include flexCenter();
-      background-color: #00000090;
+      background: #00000090;
       flex-direction: column;
       width: 100%;
       max-width: 300px;
@@ -49,73 +50,136 @@
       max-width: 280px;
     }
   }
-  //Quadro de habilidades
+  // Skills
   .skillsContainer {
     @include flexCenter();
-    background-size: cover;
-    background: #000000;
-    border-left: 1px solid #4d4d4d;
 
     .skillsCard {
       @include flexCenter(center, center, column);
-      padding: 1rem 0.5rem;
+      gap: 20px;
       width: 100%;
-      max-width: 500px;
-      min-height: 50vh;
-      gap: 30px;
+      h2 {
+        color: #fff;
+        font-size: 25px;
+        margin-bottom: 30px;
+        padding-left: 8px;
+        border-left: 1px solid red;
+        width: max-content;
 
-      .Lg {
-        background-color: rgba(255, 255, 255, 0.279);
+        span {
+          color: red;
+        }
+      }
+
+      .skill {
+        @include flexCenter(flex-start);
+        padding: 4px 8px;
+        gap: 10px;
         width: 100%;
-        max-width: 400px;
-        border-radius: 20px;
-        padding: 15px;
-        position: relative;
-        overflow: hidden;
+        max-width: 500px;
+        // background: red;
 
-        > .img-li {
-          @include flexCenter();
-          gap: 30px;
-          width: 100%;
-          transition: 0.3s;
-        }
+        .bar-skill {
+          border: 1px solid #fff;
+          height: 10px;
+          align-self: flex-end;
+          margin-bottom: 20px;
+          flex: 1;
 
-        .square {
-          transform: rotate(45deg);
-          width: 80%;
-          height: 200%;
-          top: -40%;
-          right: -100%;
-          position: absolute;
-          transition: 0.3s;
-          background-color: rgb(0, 0, 0);
-        }
-
-        &:hover > .img-li {
-          animation: animationImgLi 0.3s linear forwards;
-        }
-        &:hover .square {
-          right: -30%;
-        }
-
-        li {
-          transition: 0.4s;
-          font-weight: bold;
+          .bar-percentage {
+            height: 100%;
+            width: 50%;
+            transition: 1s;
+          }
         }
       }
+    }
 
-      img {
-        transition: 0.4s;
-        @include heightImages();
-      }
-
-      ul,
-      li {
-        color: rgb(255, 255, 255);
-        font-size: 30px;
+    .logo-skill {
+      width: 80px;
+      i {
+        font-size: 60px;
+        color: #fff;
       }
     }
   }
+  // //Quadro de habilidades
+  // .skillsContainer {
+  //   @include flexCenter();
+  //   background-size: cover;
+  //   background: #000000;
+  //   border-left: 1px solid #4d4d4d;
+
+  //   .skillsCard {
+  //     @include flexCenter(center, center, column);
+  //     padding: 1rem 0.5rem;
+  //     width: 100%;
+  //     max-width: 500px;
+  //     min-height: 50vh;
+  //     gap: 30px;
+
+  //     .Lg {
+  //       background: #ffffff47;
+  //       width: 100%;
+  //       max-width: 400px;
+  //       border-radius: 20px;
+  //       padding: 15px;
+  //       position: relative;
+  //       cursor: pointer;
+  //       overflow: hidden;
+
+  //       > .img-li {
+  //         @include flexCenter();
+  //         gap: 30px;
+  //         width: 100%;
+  //         transition: 0.3s;
+  //       }
+
+  //       .square {
+  //         position: absolute;
+  //         transform: translateX(100%);
+  //         border-radius: 20px;
+  //         right: 0px;
+  //         top: 0px;
+  //         width: 40%;
+  //         height: 100%;
+  //         background: #000;
+  //         transition: .3s;
+  //         // transform: rotate(45deg);
+  //         // width: 80%;
+  //         // height: 200%;
+  //         // top: -40%;
+  //         // right: -100%;
+  //         // position: absolute;
+  //         // transition: 0.3s;
+  //         // background-color: rgb(0, 0, 0);
+  //       }
+
+  //       &:hover > .img-li {
+  //         animation: animationImgLi 0.3s linear forwards;
+  //       }
+  //       &:hover .square {
+  //        transform: translateX(0%);
+  //       }
+
+  //       li {
+  //         transition: 0.4s;
+  //         font-weight: bold;
+  //       }
+  //     }
+
+  //     img {
+  //       transition: 0.4s;
+  //       @include heightImages();
+  //     }
+
+  //     ul,
+  //     li {
+  //       color: rgb(255, 255, 255);
+  //       font-size: 30px;
+  //     }
+  //   }
+  // }
 }
 
 @keyframes animationImgLi {
@@ -131,6 +195,7 @@
 @media (max-width: 1100px) {
   .main-container {
     flex-direction: column;
+    gap: 5rem;
   }
 
   .evCardBg {

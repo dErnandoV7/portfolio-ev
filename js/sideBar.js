@@ -22,3 +22,4 @@ document.addEventListener("click", (e) => {
   if (!elSideBarMobile.classList.contains("transitionEnter")) return;
   if (!el.classList.contains("side-bar-mobile")) buttonHideSideBarMob.click();
 });
+

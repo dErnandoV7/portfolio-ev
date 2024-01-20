@@ -3,6 +3,7 @@
   top: 37%;
   transform: translate(-60%);
   transition: 0.3s;
+  z-index: 1;
 }
 .side-bar:hover {
   transform: translateX(0);
@@ -140,7 +141,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.5647058824);
+  background: rgba(0, 0, 0, 0.5647058824);
   flex-direction: column;
   width: 100%;
   max-width: 300px;
@@ -167,67 +168,55 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background-size: cover;
-  background: #000000;
-  border-left: 1px solid #4d4d4d;
 }
 .main-container .skillsContainer .skillsCard {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 1rem 0.5rem;
+  gap: 20px;
   width: 100%;
-  max-width: 500px;
-  min-height: 50vh;
-  gap: 30px;
 }
-.main-container .skillsContainer .skillsCard .Lg {
-  background-color: rgba(255, 255, 255, 0.279);
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  padding: 15px;
-  position: relative;
-  overflow: hidden;
+.main-container .skillsContainer .skillsCard h2 {
+  color: #fff;
+  font-size: 25px;
+  margin-bottom: 30px;
+  padding-left: 8px;
+  border-left: 1px solid red;
+  width: -moz-max-content;
+  width: max-content;
 }
-.main-container .skillsContainer .skillsCard .Lg > .img-li {
+.main-container .skillsContainer .skillsCard h2 span {
+  color: red;
+}
+.main-container .skillsContainer .skillsCard .skill {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: row;
-  gap: 30px;
+  padding: 4px 8px;
+  gap: 10px;
   width: 100%;
-  transition: 0.3s;
+  max-width: 500px;
 }
-.main-container .skillsContainer .skillsCard .Lg .square {
-  transform: rotate(45deg);
-  width: 80%;
-  height: 200%;
-  top: -40%;
-  right: -100%;
-  position: absolute;
-  transition: 0.3s;
-  background-color: rgb(0, 0, 0);
+.main-container .skillsContainer .skillsCard .skill .bar-skill {
+  border: 1px solid #fff;
+  height: 10px;
+  align-self: flex-end;
+  margin-bottom: 20px;
+  flex: 1;
 }
-.main-container .skillsContainer .skillsCard .Lg:hover > .img-li {
-  animation: animationImgLi 0.3s linear forwards;
+.main-container .skillsContainer .skillsCard .skill .bar-skill .bar-percentage {
+  height: 100%;
+  width: 50%;
+  transition: 1s;
 }
-.main-container .skillsContainer .skillsCard .Lg:hover .square {
-  right: -30%;
+.main-container .skillsContainer .logo-skill {
+  width: 80px;
 }
-.main-container .skillsContainer .skillsCard .Lg li {
-  transition: 0.4s;
-  font-weight: bold;
-}
-.main-container .skillsContainer .skillsCard img {
-  transition: 0.4s;
-  height: 50px;
-}
-.main-container .skillsContainer .skillsCard ul,
-.main-container .skillsContainer .skillsCard li {
-  color: rgb(255, 255, 255);
-  font-size: 30px;
+.main-container .skillsContainer .logo-skill i {
+  font-size: 60px;
+  color: #fff;
 }
 
 @keyframes animationImgLi {
@@ -241,6 +230,7 @@
 @media (max-width: 1100px) {
   .main-container {
     flex-direction: column;
+    gap: 5rem;
   }
   .evCardBg {
     padding-top: 80px;
@@ -254,7 +244,8 @@
   list-style: none;
 }
 
-a, button {
+a,
+button {
   text-decoration: none;
   border: none;
   background: transparent;
@@ -266,4 +257,10 @@ a, button {
 
 .hide {
   display: none;
+}
+
+.initialize {
+  opacity: 0;
+  transition: 2s;
+  transform: translateX(-20px);
 }/*# sourceMappingURL=index.css.map */
