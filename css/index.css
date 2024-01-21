@@ -168,6 +168,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  width: 100%;
+  padding: 10px;
 }
 .main-container .skillsContainer .skillsCard {
   display: flex;
@@ -183,8 +185,6 @@
   margin-bottom: 30px;
   padding-left: 8px;
   border-left: 1px solid red;
-  width: -moz-max-content;
-  width: max-content;
 }
 .main-container .skillsContainer .skillsCard h2 span {
   color: red;
@@ -208,7 +208,7 @@
 }
 .main-container .skillsContainer .skillsCard .skill .bar-skill .bar-percentage {
   height: 100%;
-  width: 50%;
+  width: 0%;
   transition: 1s;
 }
 .main-container .skillsContainer .logo-skill {
@@ -233,7 +233,7 @@
     gap: 5rem;
   }
   .evCardBg {
-    padding-top: 80px;
+    padding-top: 0px;
   }
 }
 * {

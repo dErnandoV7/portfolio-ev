@@ -1,4 +1,3 @@
-// Código referente ao botão de exibir side bar
 const buttonShowSideBarMob = document.querySelector(".show-side-bar-mobile");
 const buttonHideSideBarMob = document.querySelector(".hide-side-bar-mobile");
 const elSideBarMobile = document.querySelector(".side-bar-mobile");

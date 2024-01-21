@@ -4,8 +4,9 @@ const observerImg = new IntersectionObserver((entries, observer) => {
   entries.forEach((entry) => {
     const el = entry.target;
     if (!entry.isIntersecting) return;
+    if (el.classList.contains("skillsCard")) configSkills();
     el.style.opacity = "1";
-    el.style.transform = "translateX(0px)"
+    el.style.transform = "translateX(0px)";
     observer.unobserve(el);
   });
 }, {});
@@ -13,5 +14,3 @@ const observerImg = new IntersectionObserver((entries, observer) => {
 elements.forEach((element) => {
   observerImg.observe(element);
 });
-
-console.log(skills)
