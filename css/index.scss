@@ -27,6 +27,11 @@
   box-sizing: border-box;
   font-family: "IBM Plex Sans", sans-serif;
   list-style: none;
+  user-select: none;
+}
+
+body {
+  background: #000;
 }
 
 a,

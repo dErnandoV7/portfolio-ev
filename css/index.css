@@ -1,34 +1,30 @@
 .side-bar {
   position: absolute;
   top: 37%;
-  transform: translate(-60%);
   transition: 0.3s;
   z-index: 1;
 }
-.side-bar:hover {
-  transform: translateX(0);
-}
-.side-bar:hover span {
-  display: initial;
-}
 .side-bar:hover li {
   text-align: left;
-  padding-right: 4px;
-}
-.side-bar ul {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 30px;
 }
 .side-bar ul li {
   background: #fff;
   padding: 15px 10px 15px 4px;
   border-radius: 0px 10px 10px 0px;
   cursor: pointer;
-  width: 110px;
+  transform: translate(-25%);
   text-align: right;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+.side-bar ul li:hover {
+  transform: translateX(0);
+}
+.side-bar ul li:hover span {
+  display: initial;
+  animation: animationSpanSideBar 0.6s linear forwards;
 }
 .side-bar ul li a {
   color: #000;
@@ -38,9 +34,16 @@
 .side-bar ul li a span {
   padding-left: 4px;
   font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
   display: none;
 }
 
+@keyframes animationSpanSideBar {
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 550px) {
   .side-bar {
     display: none;
@@ -62,8 +65,9 @@
   align-items: center;
   flex-direction: column;
   padding: 14px 12px 20px;
-  background: #121111;
+  background: rgba(0, 0, 0, 0.4196078431);
   border-bottom: 1px solid #a2a2a2;
+  z-index: 1;
   gap: 30px;
   position: fixed;
   top: 0;
@@ -114,22 +118,31 @@
 }
 .main-container {
   display: flex;
-  background: black;
+  background: #000;
   width: 100%;
   flex-wrap: wrap;
   padding: 10px;
   min-height: 100vh;
+  overflow: hidden;
 }
 .main-container > div {
   flex: 1;
 }
+.main-container .centerLine {
+  display: flex;
+  position: absolute;
+  background: blue;
+  animation: bgAnimation 10s infinite;
+  min-height: 30%;
+  min-width: 2px;
+  left: 50%;
+  top: -20%;
+}
 .main-container .evContainer {
-  background: #000000 url(../images/fundo.jpg) no-repeat center center;
-  background-size: cover;
   min-height: 100vh;
 }
 .main-container .evContainer .evCardBg {
-  background: rgba(0, 0, 0, 0.6156862745);
+  border-radius: 25px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -155,6 +168,9 @@
   text-align: left;
   padding: 22px;
   font-size: 18px;
+}
+.main-container .evContainer .evCard-Container p span {
+  color: blue;
 }
 .main-container .evContainer .evCard-Container p strong {
   font-size: 25px;
@@ -184,10 +200,12 @@
   font-size: 25px;
   margin-bottom: 30px;
   padding-left: 8px;
-  border-left: 1px solid red;
+  border-left: 1px solid blue;
 }
 .main-container .skillsContainer .skillsCard h2 span {
-  color: red;
+  color: blue;
+  font-size: 35px;
+  animation: animationSpan 0.9s infinite;
 }
 .main-container .skillsContainer .skillsCard .skill {
   display: flex;
@@ -209,7 +227,7 @@
 .main-container .skillsContainer .skillsCard .skill .bar-skill .bar-percentage {
   height: 100%;
   width: 0%;
-  transition: 1s;
+  transition: 1.5s;
 }
 .main-container .skillsContainer .logo-skill {
   width: 80px;
@@ -219,12 +237,23 @@
   color: #fff;
 }
 
-@keyframes animationImgLi {
+@keyframes bgAnimation {
+  0% {
+    top: -10%;
+  }
+  50% {
+    top: 80%;
+  }
+  100% {
+    top: -10%;
+  }
+}
+@keyframes animationSpan {
   from {
-    width: 100%;
+    opacity: 1;
   }
   to {
-    width: 50%;
+    opacity: 0;
   }
 }
 @media (max-width: 1100px) {
@@ -232,8 +261,16 @@
     flex-direction: column;
     gap: 5rem;
   }
+  .centerLine {
+    display: none !important;
+  }
   .evCardBg {
-    padding-top: 0px;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 300px) {
+  .evCardBg {
+    padding-top: 80px;
   }
 }
 * {
@@ -242,6 +279,13 @@
   box-sizing: border-box;
   font-family: "IBM Plex Sans", sans-serif;
   list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+body {
+  background: #000;
 }
 
 a,

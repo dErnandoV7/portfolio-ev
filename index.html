@@ -29,6 +29,10 @@
     <script src="js/sideBar.js" defer></script>
     <script src="js/skills.js" defer></script>
     <script src="js/initialize.js" defer></script>
+    <script src="js/particles.js" defer></script>
+
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
   </head>
 
   <body>
@@ -76,15 +80,16 @@
       </ul>
     </div>
 
-    <div class="main-container">
+    <div class="main-container" id="tsparticles">
       <!-- Left Container -->
+      <div class="centerLine"></div>
       <div class="evContainer">
         <div class="evCardBg">
           <div class="evCard-Container initialize">
             <img src="images/logo.png" alt="Logo Ev" class="logoEv" />
             <div class="evCard">
               <p>
-                <strong>Somos a EV.</strong> <br /><br />empresa revolucionária
+                <strong>Somos a <span>EV</span>.</strong> <br /><br />empresa revolucionária
                 de Developers. Prometemos entregar sempre o máximo que pudermos
                 e alcançarmos!
               </p>
@@ -95,9 +100,7 @@
       <!-- Right Container -->
       <div class="skillsContainer">
         <div class="skillsCard initialize">
-          <h2>
-            Confira algumas de nossas Skills<span>_</span>
-          </h2>
+          <h2>Confira algumas de nossas Skills<span>_</span></h2>
           <div class="skill js">
             <div class="logo-skill">
               <i class="fa-brands fa-js"></i>
@@ -138,41 +141,6 @@
               <div class="bar-percentage"></div>
             </div>
           </div>
-          <!-- <div class="Lg">
-            <div class="img-li">
-              <img src="images/logocss.png" alt="" />
-              <li>CSS</li>
-            </div>
-            <div class="square"></div>
-          </div>
-          <div class="Lg">
-            <div class="img-li">
-              <img src="images/logohtml.png" alt="" />
-              <li>HTML</li>
-            </div>
-            <div class="square"></div>
-          </div>
-          <div class="Lg">
-            <div class="img-li">
-              <img src="images/logojs.png" alt="" />
-              <li>JS</li>
-            </div>
-            <div class="square"></div>
-          </div>
-          <div class="Lg">
-            <div class="img-li">
-              <img src="images/logoreact.png" alt="" />
-              <li>REACT</li>
-            </div>
-            <div class="square"></div>
-          </div>
-          <div class="Lg">
-            <div class="img-li">
-              <img src="images/logosass.png" alt="" />
-              <li>SASS</li>
-            </div>
-            <div class="square"></div>
-          </div> -->
         </div>
       </div>
     </div>

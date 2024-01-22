@@ -11,8 +11,9 @@
 .side-bar-mobile {
   @include flexCenter(center, center, column);
   padding: 14px 12px 20px;
-  background: #121111;
+  background: #0000006b;
   border-bottom: 1px solid #a2a2a2;
+  z-index: 1;
   gap: 30px;
   position: fixed;
   top: 0;
