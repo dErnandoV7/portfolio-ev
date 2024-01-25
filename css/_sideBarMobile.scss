@@ -1,10 +1,11 @@
 .show-side-bar-mobile {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 40px;
   top: 40px;
   color: #fff;
   font-size: 30px;
+  z-index: 1;
   cursor: pointer;
 }
 

@@ -1,5 +1,5 @@
 .side-bar {
-  position: absolute;
+  position: fixed;
   top: 37%;
   transition: 0.3s;
   z-index: 1;
@@ -9,8 +9,6 @@
   }
 
   ul {
-    // @include flexCenter(flex-start, flex-start, column);
-    // gap: 30px;
 
     li {
       background: #fff;
@@ -22,6 +20,8 @@
       width: max-content;
       margin-bottom: 30px;
       transition: 0.5s;
+
+      
 
       &:hover {
         transform: translateX(0);
